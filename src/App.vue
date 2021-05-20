@@ -1,27 +1,19 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <q-layout view="lHh Lpr lFf">
+        <q-header>
+            <q-toolbar>
+                <q-toolbar-title> Quasar App </q-toolbar-title>
+                <div>Quasar v{{ $q.version }}</div>
+            </q-toolbar>
+        </q-header>
+
+
+        <q-page-container>
+            <HelloWorld />
+        </q-page-container>
+    </q-layout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-
-export default defineComponent({
-    name: 'App',
-    components: {
-        HelloWorld,
-    },
-})
 </script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-</style>
